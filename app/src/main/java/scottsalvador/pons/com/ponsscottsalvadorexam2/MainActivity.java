@@ -35,11 +35,8 @@ public class MainActivity extends AppCompatActivity {
         eE2 = findViewById(R.id.E2);
         eAVG = findViewById(R.id.AVG);
         keyList = new ArrayList<String>();
-    }
 
-    @Override
-    protected void onStart(){
-        super.onStart();
+
         root.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -55,13 +52,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    /*
+    @Override
+    protected void onStart(){
+        super.onStart();
+        root.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot ss: dataSnapshot.getChildren()){
+                    //keyList.add(ss.getKey());
+                    //Toast.makeText(this,"Record added to db",Toast.LENGTH_LONG).show();
+                }
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+    */
     public void addRecord(View v){
         try{
             String fname = eFN.getText().toString().trim();
             String lname = eLN.getText().toString().trim();
-            long exam1 = Long.parseLong(eE1.getText().toString().trim());
-            long exam2 = Long.parseLong(eE2.getText().toString().trim());
+            double exam1 = Double.parseDouble(eE1.getText().toString().trim());
+            double exam2 = Double.parseDouble(eE2.getText().toString().trim());
 
             Student sgrade = new Student(fname, lname, exam1, exam2);
             String key = root.push().getKey();
@@ -71,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             root.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    index = (int) dataSnapshot.getChildrenCount();
+                    index = (int) keyList.size()-1;
                     Student stud = dataSnapshot.child(keyList.get(index)).getValue(Student.class);
                     eAVG.setText(stud.getAVG().toString());
                 }

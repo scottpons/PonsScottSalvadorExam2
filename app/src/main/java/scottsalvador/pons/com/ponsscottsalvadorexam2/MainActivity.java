@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void addRecord(){
-
+    public void addRecord(View v){
+        index=0;
         String fname = eFN.getText().toString().trim();
         String lname = eLN.getText().toString().trim();
         Long exam1 = Long.parseLong(eE1.getText().toString().trim());
@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         String key = root.push().getKey();
         root.child(key).setValue(sgrade);
         keyList.add(key);
-
 
         root.addValueEventListener(new ValueEventListener() {
             @Override

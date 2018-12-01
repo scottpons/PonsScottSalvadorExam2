@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "452624391791",
-    "firebase_url": "https://fir-sample-89957.firebaseio.com",
-    "project_id": "fir-sample-89957",
-    "storage_bucket": "fir-sample-89957.appspot.com"
+    "project_number": "449929840231",
+    "firebase_url": "https://fir-sample-f8ef4.firebaseio.com",
+    "project_id": "fir-sample-f8ef4",
+    "storage_bucket": "fir-sample-f8ef4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:452624391791:android:3b815c6b794382c9",
+        "mobilesdk_app_id": "1:449929840231:android:3b815c6b794382c9",
         "android_client_info": {
           "package_name": "scottsalvador.pons.com.firebasesample"
         }
       },
       "oauth_client": [
         {
-          "client_id": "452624391791-8hrp4f0arr2pade18go51g0okv59e4dk.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "scottsalvador.pons.com.firebasesample",
-            "certificate_hash": "c58a12e6d8492ade8498d9cf2fb8c1e372e4159d"
-          }
-        },
-        {
-          "client_id": "452624391791-lfci9tva601ce0uuajivkl5ci4suses9.apps.googleusercontent.com",
+          "client_id": "449929840231-db3l7o8h9cjualprh000cq4kpqcpr1f6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCIxL3SiK8YXaKhf6APAci8JGRRNZKa1l8"
+          "current_key": "AIzaSyCIz8Hhjsnc1h12KAbiYsejEMC2Sc1pKT4"
         }
       ],
       "services": {
@@ -37,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "452624391791-lfci9tva601ce0uuajivkl5ci4suses9.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
@@ -52,28 +39,20 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:452624391791:android:5f262d0afdda07ea",
+        "mobilesdk_app_id": "1:449929840231:android:5f262d0afdda07ea",
         "android_client_info": {
           "package_name": "scottsalvador.pons.com.ponsscottsalvadorexam2"
         }
       },
       "oauth_client": [
         {
-          "client_id": "452624391791-36qsgcn7up6gev4dev9jvoflqs23qsbq.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "scottsalvador.pons.com.ponsscottsalvadorexam2",
-            "certificate_hash": "c58a12e6d8492ade8498d9cf2fb8c1e372e4159d"
-          }
-        },
-        {
-          "client_id": "452624391791-lfci9tva601ce0uuajivkl5ci4suses9.apps.googleusercontent.com",
+          "client_id": "449929840231-db3l7o8h9cjualprh000cq4kpqcpr1f6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCIxL3SiK8YXaKhf6APAci8JGRRNZKa1l8"
+          "current_key": "AIzaSyCIz8Hhjsnc1h12KAbiYsejEMC2Sc1pKT4"
         }
       ],
       "services": {
@@ -81,13 +60,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "452624391791-lfci9tva601ce0uuajivkl5ci4suses9.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

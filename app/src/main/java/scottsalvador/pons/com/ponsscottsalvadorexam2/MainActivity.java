@@ -57,32 +57,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addRecord(View v){
-        index=0;
-        String fname = eFN.getText().toString().trim();
-        String lname = eLN.getText().toString().trim();
-        Long exam1 = Long.parseLong(eE1.getText().toString().trim());
-        Long exam2 = Long.parseLong(eE2.getText().toString().trim());
-        Student sgrade = new Student(fname, lname, exam1, exam2);
-        String key = root.push().getKey();
-        root.child(key).setValue(sgrade);
-        keyList.add(key);
+        try{
+            String fname = eFN.getText().toString().trim();
+            String lname = eLN.getText().toString().trim();
+            long exam1 = Long.parseLong(eE1.getText().toString().trim());
+            long exam2 = Long.parseLong(eE2.getText().toString().trim());
 
-        root.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Student stud = dataSnapshot.child(keyList.get(index)).getValue(Student.class);
-                eFN.setText(stud.getFname());
-                eLN.setText(stud.getLname());
-                eE1.setText(stud.getExam1().toString());
-                eE2.setText(stud.getExam2().toString());
-                eAVG.setText(stud.getAVG().toString());
-            }
+            Student sgrade = new Student(fname, lname, exam1, exam2);
+            String key = root.push().getKey();
+            root.child(key).setValue(sgrade);
+            keyList.add(key);
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            root.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    index = (int) dataSnapshot.getChildrenCount();
+                    Student stud = dataSnapshot.child(keyList.get(index)).getValue(Student.class);
+                    eAVG.setText(stud.getAVG().toString());
+                }
 
-            }
-        });
-        Toast.makeText(this,"Added Record of Student",Toast.LENGTH_LONG).show();
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }catch(Exception e){
+            Toast.makeText(this,"Invalid Input",Toast.LENGTH_LONG).show();
+        }
     }
 }
